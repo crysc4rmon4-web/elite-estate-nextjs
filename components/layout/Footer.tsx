@@ -6,8 +6,9 @@ export default function Footer() {
     <footer className="py-20 bg-linen border-t border-black/5 text-obsidian">
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="text-center md:text-left">
-          <h4 className="font-serif text-lg mb-2">{CONFIG.brand.name}</h4>
-          <p className="text-[10px] uppercase tracking-[0.2em] opacity-50">
+          {/* Cambiado h4 a p para corregir jerarquía SEO, pero se ve igual */}
+          <p className="font-serif text-lg mb-2 font-bold">{CONFIG.brand.name}</p>
+          <p className="text-[10px] uppercase tracking-[0.2em] opacity-80">
             {CONFIG.brand.slogan}
           </p>
         </div>
@@ -15,10 +16,12 @@ export default function Footer() {
         <div className="flex gap-8 text-[9px] uppercase tracking-[0.2em] font-bold">
           <a href="#" className="hover:text-gold transition-colors">Instagram</a>
           <a href="#" className="hover:text-gold transition-colors">LinkedIn</a>
-          <a href={`mailto:${CONFIG.contact.email}`} className="hover:text-gold transition-colors">Contact</a>
+          {/* Cambiamos el texto para que no sea idéntico a otro link "#contact" */}
+          <a href={`mailto:${CONFIG.contact.email}`} className="hover:text-gold transition-colors">Write Us</a>
         </div>
 
-        <p className="text-[9px] uppercase tracking-[0.2em] opacity-40">
+        {/* Subimos la opacidad al 70% para que pase el test de contraste */}
+        <p className="text-[9px] uppercase tracking-[0.2em] opacity-70">
           © {new Date().getFullYear()} All Rights Reserved
         </p>
       </div>
