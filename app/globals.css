@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #b38e5d;
+  --color-obsidian: #0d0d0d;
+  --color-linen: #fbfbfb;
+}
+
+/* Tipografía de Sistema Premium */
+:root {
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--color-linen);
+  color: var(--color-obsidian);
+  -webkit-font-smoothing: antialiased;
+  selection-background-color: var(--color-gold);
+  selection-color: white;
+}
+
+/* Micro-interacción: El cursor o los links deben sentirse orgánicos */
+a, button {
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Gradiente sutil para que el blanco no sea plano */
+.bg-subtle-gradient {
+  background: linear-gradient(180deg, #fbfbfb 0%, #f0f0f0 100%);
+}
