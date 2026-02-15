@@ -23,15 +23,15 @@ export default function Hero() {
           <p className="text-gold tracking-[0.6em] uppercase text-[10px] mb-8 font-bold animate-pulse">
             Private Collection 2026
           </p>
-          
+
           <h1 className="text-white text-6xl md:text-[120px] font-light leading-[0.9] mb-10 tracking-tighter">
             ELEGANCE <br />
             <span className="font-serif italic text-white/90">Redefined.</span>
           </h1>
-          
+
           <div className="flex flex-col lg:flex-row items-center gap-12">
-            <button 
-              onClick={() => sendWhatsAppLead("Full Catalog Access")}
+            <button
+              onClick={() => document.getElementById('properties')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-white text-black px-16 py-6 text-xs font-bold uppercase tracking-[0.3em] hover:bg-gold hover:text-white transition-all duration-700 w-full lg:w-auto"
             >
               Enter The Gallery
